@@ -1,18 +1,30 @@
-<table class="table">
-  <thead class="table-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nombre comun</th>
-      <th scope="col">Tipo</th>
-      <th scope="col">Clima</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let planta of plantas, index as i">
-      <th scope="row">{{i}}</th>
-      <td>{{planta.nombre_comun}}</td>
-      <td>{{planta.tipo}}</td>
-      <td>{{planta.clima}}</td>
-    </tr>
-  </tbody>
-</table>
+<div>
+  <hr/>
+  <img src="https://dummyimage.com/800x200.png/dddddd/000000" class="img-fluid w-100" alt="image">
+  <hr/>
+</div>
+
+<div class="m-3">
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre comun</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Clima</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let planta of plantas, index as i">
+        <th scope="row">{{i}}</th>
+        <td>{{planta.nombre_comun}}</td>
+        <td>{{planta.tipo}}</td>
+        <td>{{planta.clima}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>  
+
+<div class="container-fluid w-75">
+  <p class="text-end fw-bold">Contact us: +57 3102105253 - info@viveroelotonio.iom - @viveroelotonio</p>
+</div>

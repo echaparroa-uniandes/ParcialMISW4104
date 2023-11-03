@@ -49,5 +49,12 @@ describe('PlantaListComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should have a thead tag on the table', () => {
+    expect(debug.queryAll(By.css('thead.table-dark'))).toHaveSize(1)
+  });
+
+  it('should have 3 <td> tags', () => {
+    expect(debug.queryAll(By.css('tbody tr'))).toHaveSize(3)
+  });
 
 });
