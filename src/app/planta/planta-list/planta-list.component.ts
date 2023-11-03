@@ -17,6 +17,9 @@ export class PlantaListComponent implements OnInit {
   }
 
   getPlantas():void{
-    this.plantas = this.plantaService.getPlantas();    
+    //this.plantas = this.plantaService.getPlantas();    
+    this.plantaService.getPlantas().subscribe(data => {
+      this.plantas = data;
+    });
   }
 }
