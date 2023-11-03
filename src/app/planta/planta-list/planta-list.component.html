@@ -1,3 +1,18 @@
-<p>
-  planta-list works!
-</p>
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre comun</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Clima</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let planta of plantas, index as i">
+      <th scope="row">{{i}}</th>
+      <td>{{planta.nombre_comun}}</td>
+      <td>{{planta.tipo}}</td>
+      <td>{{planta.clima}}</td>
+    </tr>
+  </tbody>
+</table>
