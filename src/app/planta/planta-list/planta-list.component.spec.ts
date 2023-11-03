@@ -39,6 +39,8 @@ describe('PlantaListComponent', () => {
         , faker.string.alpha(10)
       );
       component.plantas.push(planta);
+      component.totalPlantasInterior = 2;
+      component.totalPlantasExterior = 1;
     }
 
     fixture.detectChanges();
@@ -55,6 +57,16 @@ describe('PlantaListComponent', () => {
 
   it('should have 3 <td> tags', () => {
     expect(debug.queryAll(By.css('tbody tr'))).toHaveSize(3)
+  });
+
+  it('should have 2 interior plant', () => {
+    const element = debug.query(By.css('#total_interior')).nativeElement;
+    expect(element.textContent).toContain('Total plantas de interior: 2');
+  });
+
+  it('should have 1 exterior plant', () => {
+    const element = debug.query(By.css('#total_exterior')).nativeElement;
+    expect(element.textContent).toContain('Total plantas de exterior: 1');
   });
 
 });
